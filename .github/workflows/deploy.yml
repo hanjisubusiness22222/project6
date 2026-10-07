@@ -28,7 +28,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python (for future pipeline integration)
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -44,6 +44,12 @@ jobs:
           else
             echo "main.py not found yet. Using existing data/ai_projects.json for dashboard."
           fi
+
+      # 디스코드 알림 전송 (DISCORD_WEBHOOK_URL이 등록되어 있으면 자동 발송)
+      - name: Send Discord Notification
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python notify_discord.py
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
