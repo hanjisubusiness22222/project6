@@ -1,0 +1,58 @@
+name: Deploy AI Tender Dashboard to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # 매일 평일 오전 08:30 KST (UTC 23:30) 자동 갱신
+  schedule:
+    - cron: '30 23 * * 1-5'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python (for future pipeline integration)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 향후 팀원 1 & 팀원 2의 스크립트(main.py)가 추가되면 자동으로 실행하여 최신 JSON 생성
+      - name: Run Data Pipeline (if main.py exists)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          if [ -f "main.py" ]; then
+            echo "Running main.py to fetch latest data from data.go.kr..."
+            python main.py
+          else
+            echo "main.py not found yet. Using existing data/ai_projects.json for dashboard."
+          fi
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

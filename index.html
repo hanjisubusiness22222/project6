@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 공공 프로젝트 모니터링 대시보드 | 나라장터 입찰공고</title>
+  <meta name="description" content="공공데이터포털 조달청 나라장터 Open API 기반 인공지능(AI), LLM, 빅데이터 공공 발주 용역 실시간 모니터링 대시보드">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="app-header" id="appHeader">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">AI Public Tender Monitor</h1>
+          <p class="brand-subtitle">조달청 나라장터 공공데이터 Open API 연계 실시간 AI 사업 모니터링</p>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <div class="status-pill" id="syncStatus">
+          <span class="pulse-dot"></span>
+          <span id="lastUpdatedText">데이터 갱신: 로딩 중...</span>
+        </div>
+        <a href="https://github.com/hanjisubusiness22222/project6" target="_blank" rel="noopener" class="btn-github" id="githubLink" title="GitHub 저장소 바로가기">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- Hero / KPI Summary Section -->
+    <section class="kpi-grid" id="kpiSection">
+      <div class="kpi-card" id="kpiTotalCount">
+        <div class="kpi-icon-wrapper blue">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </div>
+        <div class="kpi-data">
+          <p class="kpi-label">진행 중인 AI 공고</p>
+          <h2 class="kpi-value" id="valTotalCount">-</h2>
+          <span class="kpi-badge positive">공공데이터 실시간 연계</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" id="kpiTotalBudget">
+        <div class="kpi-icon-wrapper emerald">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="kpi-data">
+          <p class="kpi-label">총 발주 예산 규모</p>
+          <h2 class="kpi-value" id="valTotalBudget">-</h2>
+          <span class="kpi-badge">전국 공공기관 합산</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" id="kpiAvgBudget">
+        <div class="kpi-icon-wrapper violet">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+          </svg>
+        </div>
+        <div class="kpi-data">
+          <p class="kpi-label">건당 평균 사업비</p>
+          <h2 class="kpi-value" id="valAvgBudget">-</h2>
+          <span class="kpi-badge">중대형 IT 용역 중심</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" id="kpiClosingSoon">
+        <div class="kpi-icon-wrapper amber">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="kpi-data">
+          <p class="kpi-label">마감 임박 공고 (D-7)</p>
+          <h2 class="kpi-value warning-text" id="valClosingSoon">-</h2>
+          <span class="kpi-badge warning">서류 제출 준비 요망</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Analytics / Charts Section -->
+    <section class="charts-section" id="analyticsSection">
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">AI 프로젝트 분야별 비중</h3>
+            <p class="chart-subtitle">생성형 AI, 지능형 관제, 학습 데이터 등</p>
+          </div>
+        </div>
+        <div class="chart-canvas-container">
+          <canvas id="categoryChart"></canvas>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">최고 예산 프로젝트 TOP 5</h3>
+            <p class="chart-subtitle">사업 규모가 가장 큰 핵심 인공지능 사업</p>
+          </div>
+        </div>
+        <div class="chart-canvas-container">
+          <canvas id="budgetTopChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Search Controls -->
+    <section class="controls-section" id="controlsSection">
+      <div class="search-box">
+        <svg class="search-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" id="searchInput" placeholder="공고명, 수요기관명(예: 서울시, 경찰청), 키워드 검색..." autocomplete="off">
+        <button id="clearSearchBtn" class="clear-btn" style="display:none;" title="검색어 지우기">&times;</button>
+      </div>
+
+      <div class="filter-actions">
+        <!-- Category Filter Pills -->
+        <div class="category-pills" id="categoryPills">
+          <button class="pill-btn active" data-category="ALL">전체보기</button>
+          <button class="pill-btn" data-category="생성형AI/LLM">생성형 AI/LLM</button>
+          <button class="pill-btn" data-category="지능형CCTV/비전">지능형 CCTV/비전</button>
+          <button class="pill-btn" data-category="데이터구축/학습">데이터 구축/학습</button>
+          <button class="pill-btn" data-category="AI챗봇/상담">AI 챗봇/상담</button>
+          <button class="pill-btn" data-category="빅데이터/예측">빅데이터/예측</button>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="sort-wrapper">
+          <label for="sortSelect">정렬</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="closing">마감 임박순</option>
+            <option value="budgetDesc">예산 높은순</option>
+            <option value="newest">최신 공고순</option>
+            <option value="budgetAsc">예산 낮은순</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tender Projects Grid Section -->
+    <section class="projects-section" id="projectsSection">
+      <div class="section-title-row">
+        <h3 class="section-title">
+          <span>수집된 프로젝트 목록</span>
+          <span class="count-tag" id="filteredCount">0건</span>
+        </h3>
+        <span class="live-tag">
+          <span class="live-dot"></span> 나라장터 용역 입찰 표준 규격
+        </span>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Rendered by JavaScript -->
+        <div class="loading-state">
+          <div class="spinner"></div>
+          <p>나라장터 프로젝트 데이터를 불러오는 중입니다...</p>
+        </div>
+      </div>
+      
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h4>조건에 일치하는 공고가 없습니다</h4>
+        <p>검색어를 변경하거나 필터를 초기화해 보세요.</p>
+        <button id="resetFilterBtn" class="btn-primary">필터 초기화</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-category" id="modalCategory">-</span>
+          <h3 class="modal-title" id="modalTitle">-</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-kpi-row">
+          <div class="modal-kpi-box">
+            <span class="kpi-sub">배정 예산</span>
+            <strong class="kpi-main text-emerald" id="modalBudget">-</strong>
+          </div>
+          <div class="modal-kpi-box">
+            <span class="kpi-sub">수요 기관</span>
+            <strong class="kpi-main" id="modalAgency">-</strong>
+          </div>
+          <div class="modal-kpi-box">
+            <span class="kpi-sub">마감 일시</span>
+            <strong class="kpi-main text-amber" id="modalCloseDate">-</strong>
+          </div>
+        </div>
+
+        <div class="modal-detail-list">
+          <div class="detail-row">
+            <span class="dt-label">공고 번호</span>
+            <span class="dt-value" id="modalId">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="dt-label">계약 방식</span>
+            <span class="dt-value" id="modalContractMethod">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="dt-label">공고 일자</span>
+            <span class="dt-value" id="modalNoticeDate">-</span>
+          </div>
+          <div class="detail-row full-col">
+            <span class="dt-label">사업 주요 내용 및 제안요약</span>
+            <p class="dt-desc" id="modalDescription">-</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modalSecondaryClose">닫기</button>
+        <a href="#" target="_blank" rel="noopener" class="btn-primary" id="modalG2bLink">
+          <span>나라장터 공고 상세 페이지 열기</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <p><strong>기술개발연구프로젝트</strong> · 조달청 나라장터 Open API 연계 AI 사업 모니터링 시스템</p>
+        <p class="footer-sub">데이터 출처: 공공데이터포털(data.go.kr) 조달청_나라장터 입찰공고정보서비스 · 개발: 3인 협업 프로젝트 (팀원 3 담당)</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.data.go.kr" target="_blank" rel="noopener">data.go.kr</a>
+        <a href="https://www.g2b.go.kr" target="_blank" rel="noopener">나라장터(G2B)</a>
+        <a href="https://github.com/hanjisubusiness22222/project6" target="_blank" rel="noopener">Repository</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
