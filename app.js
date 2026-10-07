@@ -134,8 +134,38 @@ function setupEventListeners() {
     if (e.target.id === 'projectModal') closeModal();
   });
 
+  // Discord Modal handlers
+  const openDiscordModalBtn = document.getElementById('openDiscordModalBtn');
+  const discordModal = document.getElementById('discordModal');
+  const discordModalCloseBtn = document.getElementById('discordModalCloseBtn');
+  const discordSecondaryClose = document.getElementById('discordSecondaryClose');
+
+  if (openDiscordModalBtn && discordModal) {
+    openDiscordModalBtn.addEventListener('click', () => {
+      discordModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeDiscordModal = () => {
+      discordModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    if (discordModalCloseBtn) discordModalCloseBtn.addEventListener('click', closeDiscordModal);
+    if (discordSecondaryClose) discordSecondaryClose.addEventListener('click', closeDiscordModal);
+    discordModal.addEventListener('click', (e) => {
+      if (e.target.id === 'discordModal') closeDiscordModal();
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      closeModal();
+      if (discordModal) {
+        discordModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
   });
 }
 
