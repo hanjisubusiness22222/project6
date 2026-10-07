@@ -76,11 +76,11 @@ def send_discord_notification():
 
     # 디스코드 리치 임베드(Embed) 페이로드 구성
     payload = {
-        "username": "AI 공공발주 알리미",
+        "username": "AI 모? 알리미",
         "avatar_url": "https://img.icons8.com/color/96/artificial-intelligence.png",
         "embeds": [
             {
-                "title": "[나라장터] 오늘의 신규 AI 공공 프로젝트 모니터링",
+                "title": "[나라장터] AI프로젝트 공고 모니터 (AI 모?)",
                 "description": "공공데이터포털(data.go.kr) 조달청 나라장터 Open API에서 수집된 최신 인공지능 입찰 공고 현황입니다.",
                 "url": "https://hanjisubusiness22222.github.io/project6/",
                 "color": 6524913,  # Indigo (#6366f1)
