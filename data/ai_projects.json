@@ -1,161 +1,944 @@
 {
-  "updated_at": "2026-10-07T20:57:32+09:00",
+  "updated_at": "2026-10-07T21:25:02+09:00",
   "summary": {
-    "total_count": 8,
-    "total_budget": 9670000000,
+    "total_count": 95,
+    "total_budget": 37917873873,
     "top_keywords": [
       "생성형AI",
-      "컴퓨터비전",
-      "LLM",
       "데이터구축",
-      "딥러닝"
+      "챗봇",
+      "LLM",
+      "예측모델"
     ],
     "top_budget_projects": [
       {
-        "id": "20261001005",
-        "title": "인공지능 학습용 데이터 구축 사업(농업 분야)",
+        "id": "R26BK01750163",
+        "title": "NPU 기반 범정부 AI 서비스 구현",
         "agency": "한국지능정보사회진흥원",
-        "budget": 3200000000,
-        "category": "데이터구축"
+        "budget": 13408420416,
+        "category": "기타AI"
       },
       {
-        "id": "20261001004",
-        "title": "인공지능 CCTV 영상분석 시스템 구축",
-        "agency": "서울특별시",
-        "budget": 2300000000,
-        "category": "컴퓨터비전"
+        "id": "R26BK01745873",
+        "title": "AI·SW마에스트로 제17기 우수자(팀) 글로벌 AI·창업 역량 강화 교육 기획 및 운영",
+        "agency": "(사)한국정보산업연합회",
+        "budget": 2250000000,
+        "category": "기타AI"
       },
       {
-        "id": "20261001001",
-        "title": "생성형 AI 기반 대국민 민원 안내 서비스 구축 용역",
-        "agency": "한국지역정보개발원",
-        "budget": 1500000000,
-        "category": "생성형AI"
+        "id": "R26BK01747442",
+        "title": "우즈베키스탄 AI 바이옴센터(유전체분석센터 및 인체자원은행) 건립 F/S(타당성조사) 용역",
+        "agency": "한국수출입은행",
+        "budget": 1900000000,
+        "category": "기타AI"
       },
       {
-        "id": "20261001002",
-        "title": "LLM 활용 행정문서 요약 시스템 개발",
-        "agency": "행정안전부",
-        "budget": 850000000,
-        "category": "생성형AI"
+        "id": "R26BK01738961",
+        "title": "스리랑카 미래인재 양성을 위한 AI 기반 한국어 및 한국문화 프로젝트봉사단 사업(26-29) PMC 용역",
+        "agency": "한국국제협력단",
+        "budget": 1599936235,
+        "category": "기타AI"
       },
       {
-        "id": "20261001011",
-        "title": "딥러닝 기반 문서 OCR 인식 시스템 구축",
-        "agency": "국세청",
-        "budget": 760000000,
-        "category": "컴퓨터비전"
+        "id": "R26BK01745687",
+        "title": "탄자니아 AI를 활용한 관광분야 직업역량강화 프로젝트봉사단 사업(26-29) PMC 용역",
+        "agency": "한국국제협력단",
+        "budget": 1587182394,
+        "category": "기타AI"
       }
     ],
     "top_agencies": [
       {
-        "agency": "서울특별시",
-        "count": 2,
-        "total_budget": 2940000000
-      },
-      {
         "agency": "한국지능정보사회진흥원",
-        "count": 1,
-        "total_budget": 3200000000
+        "count": 8,
+        "total_budget": 14714402256
       },
       {
-        "agency": "한국지역정보개발원",
-        "count": 1,
-        "total_budget": 1500000000
+        "agency": "한국생산기술연구원",
+        "count": 4,
+        "total_budget": 119297150
       },
       {
-        "agency": "행정안전부",
-        "count": 1,
-        "total_budget": 850000000
+        "agency": "한국국제협력단",
+        "count": 3,
+        "total_budget": 4774118629
       },
       {
-        "agency": "국세청",
-        "count": 1,
-        "total_budget": 760000000
+        "agency": "한국화학융합시험연구원",
+        "count": 3,
+        "total_budget": 807000000
+      },
+      {
+        "agency": "(사)한국정보산업연합회",
+        "count": 2,
+        "total_budget": 2425000000
       }
     ],
     "category_counts": {
-      "생성형AI": 3,
-      "챗봇": 1,
-      "컴퓨터비전": 2,
-      "데이터구축": 1,
-      "기타AI": 1
+      "생성형AI": 7,
+      "챗봇": 2,
+      "컴퓨터비전": 0,
+      "데이터구축": 5,
+      "기타AI": 81
     },
-    "new_last_7_days": 5,
-    "new_this_month": 5
+    "new_last_7_days": 9,
+    "new_this_month": 9
   },
   "projects": [
     {
-      "id": "20261001003",
-      "title": "AI 챗봇 기반 관광 안내 서비스 고도화 용역",
-      "agency": "한국관광공사",
-      "budget": 420000000,
-      "close_date": "2026-10-15 11:00",
-      "category": "챗봇",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001003&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001002",
-      "title": "LLM 활용 행정문서 요약 시스템 개발",
-      "agency": "행정안전부",
-      "budget": 850000000,
-      "close_date": "2026-10-20 14:00",
-      "category": "생성형AI",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001002&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001006",
-      "title": "AI 기반 하천 수위 예측 모델 개발 연구용역",
-      "agency": "한국수자원공사",
-      "budget": 0,
-      "close_date": "2026-10-22 15:00",
-      "category": "기타AI",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001006&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001001",
-      "title": "생성형 AI 기반 대국민 민원 안내 서비스 구축 용역",
-      "agency": "한국지역정보개발원",
-      "budget": 1500000000,
-      "close_date": "2026-10-24 10:00",
-      "category": "생성형AI",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001001&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001010",
-      "title": "생성형 AI 활용 교육 콘텐츠 제작 지원 용역",
-      "agency": "서울특별시",
-      "budget": 640000000,
-      "close_date": "2026-10-27 10:00",
-      "category": "생성형AI",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001010&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001004",
-      "title": "인공지능 CCTV 영상분석 시스템 구축",
-      "agency": "서울특별시",
-      "budget": 2300000000,
-      "close_date": "2026-10-28 10:00",
-      "category": "컴퓨터비전",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001004&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001011",
-      "title": "딥러닝 기반 문서 OCR 인식 시스템 구축",
-      "agency": "국세청",
-      "budget": 760000000,
-      "close_date": "2026-10-30 10:00",
-      "category": "컴퓨터비전",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001011&bidPbancOrd=000"
-    },
-    {
-      "id": "20261001005",
-      "title": "인공지능 학습용 데이터 구축 사업(농업 분야)",
-      "agency": "한국지능정보사회진흥원",
-      "budget": 3200000000,
-      "close_date": "2026-11-03 17:00",
+      "id": "R26BK01729183",
+      "title": "(온디바이스 VLA 자율행동 로봇 디바이스) AX 디바이스용 AI 학습 데이터 라벨링 용역",
+      "agency": "한국화학융합시험연구원",
+      "budget": 200000000,
+      "close_date": "2026-09-28 14:00",
       "category": "데이터구축",
-      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001005&bidPbancOrd=000"
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01729183&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01729184",
+      "title": "(국산 NPU 기반 VLA를 활용한 피지컬 AI 물류 휴머노이드 로봇)AX 디바이스용 AI 모델(VLA) 개발 및 학습 데이터 라벨링 용역",
+      "agency": "한국화학융합시험연구원",
+      "budget": 400000000,
+      "close_date": "2026-09-28 14:00",
+      "category": "데이터구축",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01729184&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01738574",
+      "title": "FSR센서 Autocalibration 펌웨어 및 AI 알고리즘 개발",
+      "agency": "인투시스 주식회사",
+      "budget": 28600000,
+      "close_date": "2026-09-28 18:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01738574&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01741334",
+      "title": "AI심화시대 정보주체 관점에서의 개인정보 기능 수행체계 효율화 전략 연구",
+      "agency": "개인정보보호위원회",
+      "budget": 50000000,
+      "close_date": "2026-09-29 11:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741334&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743670",
+      "title": "디지털배움터 플랫폼 AI 실습 기능 개발 개인정보영향평가",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 42075598,
+      "close_date": "2026-09-29 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743670&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01744508",
+      "title": "2026년 소나무재선충병 무인항공기 예찰 AI 분석 용역",
+      "agency": "경상북도 안동시",
+      "budget": 112310000,
+      "close_date": "2026-09-30 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744508&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748404",
+      "title": "[지역주도형 AI대전환사업]AI솔루션 구축사업",
+      "agency": "에스엘피주식회사",
+      "budget": 209506000,
+      "close_date": "2026-09-30 15:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748404&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746540",
+      "title": "AI신기술 체험·전시 용역",
+      "agency": "경북대학교 첨단정보통신융합산업기술원",
+      "budget": 54476730,
+      "close_date": "2026-10-01 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746540&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748821",
+      "title": "나노복합 웨어링 및 AI 기반 자율진단 기술이 적용된 중대형 펌프 개발을 위한 AI부 자율진단 개발",
+      "agency": "(유)한성산기",
+      "budget": 70400000,
+      "close_date": "2026-10-02 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748821&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751555",
+      "title": "나노복합 웨어링 및 AI 기반 자율진단 기술이 적용된 중대형 펌프 개발을 위한 제품 가공",
+      "agency": "(유)한성산기",
+      "budget": 67540000,
+      "close_date": "2026-10-02 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751555&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01740161",
+      "title": "한양대학교 산학협력단 2026년 글로벌 AI 인재양성 해외 파견 프로그램 지원 용역",
+      "agency": "한양대학교 산학협력단",
+      "budget": 70000000,
+      "close_date": "2026-10-02 17:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740161&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01743061",
+      "title": "AI 사회정책 포럼 컨퍼런스 대행",
+      "agency": "정보통신정책연구원",
+      "budget": 50000000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743061&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743848",
+      "title": "「특수교육 AI·디지털 교육자료 현장 안착을 위한 활용 역량 강화」 연수 위탁 용역 재공고",
+      "agency": "경상남도교육청 경상남도교육청특수교육원",
+      "budget": 115039000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743848&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743942",
+      "title": "스마트도시 AI미디어 콘텐츠 제작 및 페스티벌 통합 운영",
+      "agency": "재단법인 경북아이티융합 산업기술원",
+      "budget": 660000000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743942&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743966",
+      "title": "AI 기반 구조물 반응 해안선 변화 모델링 및 연안침식 디지털트윈 연계 지원 용역",
+      "agency": "한국해양과학기술원",
+      "budget": 42000000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743966&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745258",
+      "title": "(동의대학교 산학협력단) [앵커] 지역 특화 AI 산업 연계형 「AI x Local」 융합 교육 프로그램 개발",
+      "agency": "동의대학교 산학협력단",
+      "budget": 60000000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745258&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746008",
+      "title": "국립광주과학관 인공지능관 리뉴얼 연계 「AI 융합체험존」 시범운영 용역",
+      "agency": "국립광주과학관",
+      "budget": 33110000,
+      "close_date": "2026-10-06 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746008&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01742928",
+      "title": "시니어 및 독서 취약계층 대상 맥락 기반 AI독서지원 기술",
+      "agency": "(주)다산북스",
+      "budget": 90000000,
+      "close_date": "2026-10-06 11:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742928&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743487",
+      "title": "2026 부천대학교 AI·DX취업박람회 시행 용역",
+      "agency": "부천대학교 산학협력단",
+      "budget": 50000000,
+      "close_date": "2026-10-06 11:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743487&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01736733",
+      "title": "계룡시 맞춤형 AI활용역량 강화 교육 프로그램 운영",
+      "agency": "건양대학교 산학협력단",
+      "budget": 87000000,
+      "close_date": "2026-10-06 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736733&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743087",
+      "title": "(채혈 없이 실시간 저전력 온디바이스 혈당값 추론이 가능한 광음향 비침습 혈당측정기) AX 디바이스용 AI 학습 데이터 라벨링 용역",
+      "agency": "한국화학융합시험연구원",
+      "budget": 207000000,
+      "close_date": "2026-10-06 14:00",
+      "category": "데이터구축",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743087&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743105",
+      "title": "강원 AI 소상공인 안심경영 지원 서비스 개인정보 영향평가",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 75384038,
+      "close_date": "2026-10-07 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743105&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743168",
+      "title": "AI 수사자료 표준화 시스템 유지관리",
+      "agency": "경찰청",
+      "budget": 84000000,
+      "close_date": "2026-10-07 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743168&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748110",
+      "title": "(동의대학교 산학협력단) 2026년 글로벌 AI 기업 탐방 및 Two Track 해커톤 교육프로그램 운영",
+      "agency": "동의대학교 산학협력단",
+      "budget": 60000000,
+      "close_date": "2026-10-07 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748110&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749501",
+      "title": "[대학혁신지원사업]협성대학교 기초학력진단 및 AI 기반 개인 맞춤형 학습지원 시스템 구축 용역 재공고입찰(긴급)",
+      "agency": "협성대학교",
+      "budget": 55000000,
+      "close_date": "2026-10-07 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749501&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750825",
+      "title": "2026 경상북도교육청 발명인공지능&메이커한마당 운영 소액수의 견적제출 안내 공고",
+      "agency": "경상북도교육청 경상북도교육청발명인공지능교육원",
+      "budget": 31300000,
+      "close_date": "2026-10-07 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750825&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748494",
+      "title": "국내 전력망 데이터를 활용한 물리정보 기반 AI-SCUC 시작품 제작",
+      "agency": "한국전기연구원",
+      "budget": 55000000,
+      "close_date": "2026-10-07 11:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748494&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01742014",
+      "title": "[AI앵커]AWS 글로벌 공인자격증 취득 전문교육 위탁 용역",
+      "agency": "영남대학교",
+      "budget": 50000000,
+      "close_date": "2026-10-07 11:30",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742014&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01740516",
+      "title": "i-세종학당 AI활용 한국어 학습 서비스 콘텐츠 확대 및 기능 개선 감리 변경 공고",
+      "agency": "세종학당재단",
+      "budget": 98700000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01740516&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01744488",
+      "title": "AI 기반 해양조사·정보 품질관리 솔루션 도입 방안 연구",
+      "agency": "한국해양조사협회",
+      "budget": 50000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744488&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745352",
+      "title": "2026년 AI·SW마에스트로 제17기 서울센터 수료식 행사용역",
+      "agency": "(사)한국정보산업연합회",
+      "budget": 175000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745352&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745574",
+      "title": "외식업 특화 LLM 기반  AI Agent 시스템 통합·안정화·운영지원 용역",
+      "agency": "주식회사 낭만상회",
+      "budget": 50000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745574&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746215",
+      "title": "국립광주과학관 AI 및 혁신적 첨단 기술을 활용한 과학전시관의  디지털 전환 전략 수립 등 연구용역",
+      "agency": "국립광주과학관",
+      "budget": 40000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746215&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746499",
+      "title": "설비 진단용 AI 모델의 시뮬레이션 환경 구축",
+      "agency": "한국생산기술연구원",
+      "budget": 49500000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746499&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746808",
+      "title": "[앵커] 생성형 AI 융합 K-pop 송캠프 운영 용역",
+      "agency": "명지전문대학",
+      "budget": 22000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746808&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747242",
+      "title": "화학단백체학 프로파일링 데이터 생산 및 인공지능을 활용한 구조 특징 예측 모델 최적화(장기계속)",
+      "agency": "한국생명공학연구원",
+      "budget": 100000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747242&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747259",
+      "title": "AI 학습용 염증성 질환 의약품 데이터 수집용역(장기계속)",
+      "agency": "한국생명공학연구원",
+      "budget": 100000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747259&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747393",
+      "title": "2026년 AI 평가시스템(K-DOT기반) 문항 출제위원 역량강화 연수 위탁용역",
+      "agency": "전북특별자치도교육청",
+      "budget": 190000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747393&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747636",
+      "title": "2026년 동아보건대학교 수요자 맞춤형 AI 기반 통합 디지털 캠퍼스 포털 구축",
+      "agency": "동아보건대학교",
+      "budget": 200000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747636&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748554",
+      "title": "[지역 주도형 AI 대전환 사업] AI 및 디지털트윈 기반 정밀 성형 설비 예지보전 지능화 데이터 통합 및 MLOps 플랫폼 구축",
+      "agency": "(주)원화정밀",
+      "budget": 110000000,
+      "close_date": "2026-10-12 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748554&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746032",
+      "title": "2026년 Google Cloud 기반 AI 에이전트 교육과정 운영 용역",
+      "agency": "인덕대학 산학협력단",
+      "budget": 65000000,
+      "close_date": "2026-10-12 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746032&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743843",
+      "title": "마산대학교 2026학년도 앵커사업 AIˑDX 콘텐츠 개발 용역",
+      "agency": "마산대학 산학협력단",
+      "budget": 30000000,
+      "close_date": "2026-10-12 14:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743843&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747588",
+      "title": "[육성] 교수자 인공지능 활용 지원을 위한 인공지능 서비스 구독권 제공",
+      "agency": "한국교원대학교",
+      "budget": 25527000,
+      "close_date": "2026-10-12 14:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747588&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745771",
+      "title": "생체신호 센서 기반 생활체육 AI 분석 솔루션 개발 용역",
+      "agency": "주식회사 로임시스템",
+      "budget": 40700000,
+      "close_date": "2026-10-12 14:30",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745771&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746762",
+      "title": "[한남대학교 산학협력단][재공고]철도 안전훈련 실수패턴 분석 AI 적용환경 구축 및 시스템 연동 용역",
+      "agency": "한남대학교 산학협력단",
+      "budget": 90000000,
+      "close_date": "2026-10-12 15:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746762&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747764",
+      "title": "[재공고]AI 라이브 커머스 스토리텔링 콘텐츠 개발 용역",
+      "agency": "삼색이수상권상인협동조합",
+      "budget": 70000000,
+      "close_date": "2026-10-12 16:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747764&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749095",
+      "title": "한양대학교 산학협력단 2026년 글로벌 AI 인재양성 해외 파견 프로그램 지원 용역",
+      "agency": "한양대학교 산학협력단",
+      "budget": 70000000,
+      "close_date": "2026-10-12 16:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749095&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01725700",
+      "title": "통합제공체계, AI허브 기개방 데이터 개인정보 재검증 및 비식별 용역",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 299952629,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01725700&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746749",
+      "title": "새만금 피지컬 AI 지원 시설 기본구상 용역",
+      "agency": "새만금개발청",
+      "budget": 111146000,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746749&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746959",
+      "title": "AI 자율제조 전문인력 양성 및 컨설팅 지원 용역",
+      "agency": "한국생산기술연구원",
+      "budget": 28797150,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746959&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747506",
+      "title": "범정부 AI 공통기반 구현(2차) 사업 위탁감리",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 469575893,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747506&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748321",
+      "title": "(재공고)데이터 기반 항공 산업의 인공지능 전환 전망 및 사업화 전략 연구용역",
+      "agency": "한국생산기술연구원",
+      "budget": 17000000,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748321&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748530",
+      "title": "진주시 인공지능(AI) 기본계획 수립 용역",
+      "agency": "경상남도 진주시",
+      "budget": 70000000,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748530&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751431",
+      "title": "해양수산 AI 응용제품 신속 상용화 지원사업 위탁정산",
+      "agency": "해양수산과학기술진흥원",
+      "budget": 0,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751431&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751861",
+      "title": "공공부문 인공지능 신뢰기반 제도 교육 및 홍보 콘텐츠 제작",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 43872995,
+      "close_date": "2026-10-13 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751861&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746370",
+      "title": "지역특화 실용연구 학과(트랙) 연구기획(AI로봇,소재부품)",
+      "agency": "한국생산기술연구원",
+      "budget": 24000000,
+      "close_date": "2026-10-13 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746370&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746638",
+      "title": "경북산업DX협업지원센터 경산 모빌리티 분야 특화산업 AI 교육과정 개발 및 재직자 중심 AI 활용 교육 운영 용역",
+      "agency": "재단법인 경북테크노파크",
+      "budget": 30000000,
+      "close_date": "2026-10-13 12:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746638&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749201",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "agency": "가천대학교",
+      "budget": 799886406,
+      "close_date": "2026-10-13 14:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749201&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01743657",
+      "title": "(26G039-H)AI기반 사이버위협 분석체계 개발실증",
+      "agency": "국방부 국군재정관리단",
+      "budget": 490743580,
+      "close_date": "2026-10-14 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743657&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749714",
+      "title": "AI학습용데이터 통합제공시스템 구축 위탁감리",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 305091470,
+      "close_date": "2026-10-14 10:00",
+      "category": "데이터구축",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749714&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750115",
+      "title": "2026년 평가정보 자동수집·활용을 위한 AI 모델 개발 용역",
+      "agency": "한국발명진흥회",
+      "budget": 108500000,
+      "close_date": "2026-10-14 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750115&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750163",
+      "title": "NPU 기반 범정부 AI 서비스 구현",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 13408420416,
+      "close_date": "2026-10-14 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750163&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01725670",
+      "title": "지방세 AI 상담 서비스 개인정보 영향평가",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 70029217,
+      "close_date": "2026-10-15 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01725670&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750508",
+      "title": "자가차량 장착용 온디바이스 AI 카메라 모듈 개발 및 제작",
+      "agency": "주식회사 무한정보기술",
+      "budget": 220000000,
+      "close_date": "2026-10-15 16:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750508&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01758297",
+      "title": "생성형 AI 기반 직업상담 Case Workflow 실무’ 보수교육 교과목 개발",
+      "agency": "한국기술교육대학교",
+      "budget": 20000000,
+      "close_date": "2026-10-19 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758297&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01758734",
+      "title": "진주시 인공지능(AI) 기본계획 수립 용역",
+      "agency": "경상남도 진주시",
+      "budget": 70000000,
+      "close_date": "2026-10-19 17:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758734&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745873",
+      "title": "AI·SW마에스트로 제17기 우수자(팀) 글로벌 AI·창업 역량 강화 교육 기획 및 운영",
+      "agency": "(사)한국정보산업연합회",
+      "budget": 2250000000,
+      "close_date": "2026-10-20 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745873&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01735939",
+      "title": "제조 데이터 통합 기반 AI 서비스 개발",
+      "agency": "(재)구미전자정보기술원",
+      "budget": 204852800,
+      "close_date": "2026-10-21 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01735939&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01746180",
+      "title": "2026 CO-SHOW 인공지능혁신융합대학사업단 행사 기획·운영 대행 용역",
+      "agency": "전남대학교 산학협력단",
+      "budget": 151450000,
+      "close_date": "2026-10-21 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746180&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750037",
+      "title": "2027년 나라배움터 이러닝 콘텐츠 및 AI 교육 패키지 운영 사업",
+      "agency": "인사혁신처 국가공무원인재개발원",
+      "budget": 1214898800,
+      "close_date": "2026-10-21 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750037&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01759036",
+      "title": "인공지능 학습용 데이터 구축을 위한 도로 포장 데이터 수집/가공 플랫폼 용역",
+      "agency": "주식회사 무한정보기술",
+      "budget": 176000000,
+      "close_date": "2026-10-22 10:00",
+      "category": "데이터구축",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759036&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01754573",
+      "title": "2026년 인공지능사관학교 AI 커리어앱 페어 행사 위탁용역",
+      "agency": "인공지능산업융합사업단",
+      "budget": 150000000,
+      "close_date": "2026-10-23 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754573&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751619",
+      "title": "AI의료 기술 개발 고도화 관련 임상연구정보검색시스템(CDW) 구축 재공고",
+      "agency": "원광대학교 광주한방병원, 원광병원",
+      "budget": 1070500000,
+      "close_date": "2026-10-23 11:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751619&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01741674",
+      "title": "부산대학교 AI 기반 맞춤형 교육지원시스템(3단계) 구축",
+      "agency": "부산대학교",
+      "budget": 1128486000,
+      "close_date": "2026-10-30 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741674&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01756240",
+      "title": "AI 인프라 및 생성형 AI 구축 사업",
+      "agency": "신용보증재단중앙회",
+      "budget": 622503000,
+      "close_date": "2026-11-03 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756240&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01738961",
+      "title": "스리랑카 미래인재 양성을 위한 AI 기반 한국어 및 한국문화 프로젝트봉사단 사업(26-29) PMC 용역",
+      "agency": "한국국제협력단",
+      "budget": 1599936235,
+      "close_date": "2026-11-03 15:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01738961&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747372",
+      "title": "2026년 AI·SW 기술 기반 과학 시뮬레이션 콘텐츠 개발",
+      "agency": "한국과학창의재단",
+      "budget": 800000000,
+      "close_date": "2026-11-09 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747372&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745687",
+      "title": "탄자니아 AI를 활용한 관광분야 직업역량강화 프로젝트봉사단 사업(26-29) PMC 용역",
+      "agency": "한국국제협력단",
+      "budget": 1587182394,
+      "close_date": "2026-11-09 14:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745687&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01744201",
+      "title": "우즈베키스탄 AI 기반 한국어·문화 이해증진 프로젝트봉사단 사업(26-29) PMC 용역",
+      "agency": "한국국제협력단",
+      "budget": 1587000000,
+      "close_date": "2026-11-10 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744201&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01750771",
+      "title": "2026년 권역책임의료기관 AI 기반 진료시스템 지원 서비스 도입 및 통합 플랫폼 용역",
+      "agency": "강원대학교병원",
+      "budget": 445242450,
+      "close_date": "2026-11-10 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750771&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747442",
+      "title": "우즈베키스탄 AI 바이옴센터(유전체분석센터 및 인체자원은행) 건립 F/S(타당성조사) 용역",
+      "agency": "한국수출입은행",
+      "budget": 1900000000,
+      "close_date": "2026-11-10 17:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747442&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01759843",
+      "title": "카자흐스탄 크즐오르다 대학교 인공지능 단과대학 내 VR 실습실 장비 설치사업 구축",
+      "agency": "서울과학기술대학교 산학협력단",
+      "budget": 104879540,
+      "close_date": "2026-11-17 10:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759843&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01730697",
+      "title": "가천대학교 AI부트캠프 사업 생성형 AI 심화 교육 기획·운영 위탁 용역(2026-2학기)",
+      "agency": "가천대학교 산학협력단",
+      "budget": 29000000,
+      "close_date": "",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01730697&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01738322",
+      "title": "선문대학교 산학협력단 2026 충남 온(ON)누리 AI· SW 학생동아리 한마당  용역 계약의 건",
+      "agency": "선문대학교 산학협력단",
+      "budget": 44000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01738322&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01739275",
+      "title": "[앵커2-2] AI기반 ESG 경영 지원 챗봇 시스템 구축 용역",
+      "agency": "경인여자대학교",
+      "budget": 29000000,
+      "close_date": "",
+      "category": "챗봇",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01739275&bidPbancOrd=001"
+    },
+    {
+      "id": "R26BK01742487",
+      "title": "울산 자동차 부품 산업 AI 전환(AX) 전략 수립 연구용역",
+      "agency": "(재)울산테크노파크",
+      "budget": 50000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01742487&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01744849",
+      "title": "AI 보증신청 및 챗봇 시스템 개발",
+      "agency": "자본재공제조합",
+      "budget": 630000000,
+      "close_date": "",
+      "category": "챗봇",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744849&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01745342",
+      "title": "기술평가 업무 지원을 위한 생성형 AI 구독 서비스 도입",
+      "agency": "기술보증기금",
+      "budget": 210000000,
+      "close_date": "",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745342&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01747833",
+      "title": "AI 기반 교육·연구 지원 플랫폼 구축 감리 용역",
+      "agency": "백석대학교",
+      "budget": 200000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747833&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01748720",
+      "title": "2026년 하반기 국방AI 교육대학 한국국방기술학회 추계학술대회 참가 및 국방AI경진대회 개최 용역",
+      "agency": "중앙대학교 산학협력단",
+      "budget": 42758532,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748720&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749038",
+      "title": "[2026 혁신] 연성대학교 AI취업메이트(인턴십) 교육프로그램 운영 용역",
+      "agency": "연성대학교 산학협력단",
+      "budget": 30000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749038&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01749209",
+      "title": "[52604][앵커/B4] 경북 ICT/SW/AI기업 GS/V&V인증지원 프로그램",
+      "agency": "포항공과대학교 산학협력단",
+      "budget": 70000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749209&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751330",
+      "title": "안양시 인공지능 기본 및 종합계획 수립 용역",
+      "agency": "경기도 안양시",
+      "budget": 100000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751330&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01751800",
+      "title": "가천대학교 AI부트캠프 사업 생성형 AI 심화 교육 기획·운영 위탁 용역(2026-2학기)",
+      "agency": "가천대학교 산학협력단",
+      "budget": 28000000,
+      "close_date": "",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751800&bidPbancOrd=000"
+    },
+    {
+      "id": "R26BK01757704",
+      "title": "사업관리체계 인공지능 전환(AX)을 위한 ISP 수립",
+      "agency": "한국산업기술진흥원",
+      "budget": 189000000,
+      "close_date": "",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757704&bidPbancOrd=000"
     }
   ]
 }
