@@ -23,10 +23,33 @@ if sys.stdout.encoding != 'utf-8':
 
 KST = ZoneInfo("Asia/Seoul")
 
+
+def load_env_file(dotenv_path: str = ".env") -> None:
+    """외부 패키지 설치 없이 루트 디렉토리의 .env 파일을 자동으로 읽어 환경변수에 등록합니다."""
+    if not os.path.exists(dotenv_path):
+        return
+    try:
+        with open(dotenv_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+                k, v = line.split("=", 1)
+                k = k.strip()
+                v = v.strip().strip("'\"")
+                if k and k not in os.environ:
+                    os.environ[k] = v
+    except Exception:
+        pass
+
+
+load_env_file()
+
 # 조달청_나라장터 입찰공고정보서비스 용역(Service) 입찰공고 조회 API
 ENDPOINT_URL = "https://apis.data.go.kr/1230000/BidPublicInfoService05/getBidPblancListInfoServcPPSSrch"
 
 DEFAULT_KEYWORDS = ["인공지능", "AI", "생성형", "LLM", "데이터구축"]
+
 
 
 def mask_key(url: str) -> str:
