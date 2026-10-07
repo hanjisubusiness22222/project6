@@ -415,6 +415,11 @@ window.openModal = function(id) {
   const g2bBtn = document.getElementById('modalG2bLink');
   g2bBtn.href = project.link || 'https://www.g2b.go.kr';
 
+  const searchBtn = document.getElementById('modalSearchLink');
+  if (searchBtn) {
+    searchBtn.href = `https://www.google.com/search?q=${encodeURIComponent('나라장터 ' + project.title)}`;
+  }
+
   const modal = document.getElementById('projectModal');
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
