@@ -158,6 +158,36 @@ function setupEventListeners() {
     });
   }
 
+  // Sync Data Button
+  const syncDataBtn = document.getElementById('syncDataBtn');
+  if (syncDataBtn) {
+    syncDataBtn.addEventListener('click', async () => {
+      const btnText = syncDataBtn.querySelector('.sync-btn-text');
+      syncDataBtn.classList.add('spinning');
+      syncDataBtn.disabled = true;
+      if (btnText) btnText.textContent = '동기화 중...';
+
+      try {
+        const success = await loadData(true);
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        if (success) {
+          showToast(`공고 데이터 동기화 완료! (${timeStr})`);
+        } else {
+          showToast('동기화 실패: 데이터 파일을 확인해주세요.', false);
+        }
+      } catch (e) {
+        showToast('동기화 중 오류가 발생했습니다.', false);
+      } finally {
+        setTimeout(() => {
+          syncDataBtn.classList.remove('spinning');
+          syncDataBtn.disabled = false;
+          if (btnText) btnText.textContent = '데이터 동기화';
+        }, 600);
+      }
+    });
+  }
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeModal();
@@ -169,10 +199,30 @@ function setupEventListeners() {
   });
 }
 
-// Fetch JSON Data
-async function loadData() {
+// Toast Notification Helper
+function showToast(message, isSuccess = true) {
+  let toast = document.getElementById('syncToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'syncToast';
+    toast.className = 'sync-toast';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = `
+    <span class="toast-icon">${isSuccess ? '✅' : '⚠️'}</span>
+    <span>${message}</span>
+  `;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+}
+
+// Fetch JSON Data (supports cache-busting)
+async function loadData(forceRefresh = false) {
   try {
-    const res = await fetch('data/ai_projects.json');
+    const url = forceRefresh ? `data/ai_projects.json?t=${Date.now()}` : 'data/ai_projects.json';
+    const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
     const data = await res.json();
 
@@ -180,11 +230,14 @@ async function loadData() {
     renderKPIs(data.summary, data.updated_at);
     initCharts(data);
     applyFiltersAndRender();
+    return true;
 
   } catch (err) {
     console.warn('Failed to load local data/ai_projects.json, using fallback mock.', err);
     // Display error notification in status pill
-    document.getElementById('lastUpdatedText').textContent = '샘플 데이터 로드 완료';
+    const lastUpdateElem = document.getElementById('lastUpdatedText');
+    if (lastUpdateElem) lastUpdateElem.textContent = '샘플 데이터 로드 완료';
+    return false;
   }
 }
 
@@ -193,8 +246,10 @@ function renderKPIs(summary, updatedAt) {
   if (updatedAt) {
     const dateObj = new Date(updatedAt);
     const dateStr = dateObj.toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-    document.getElementById('lastUpdatedText').textContent = `최근 동기화: ${dateStr}`;
+    const lastUpdateElem = document.getElementById('lastUpdatedText');
+    if (lastUpdateElem) lastUpdateElem.textContent = `최근 동기화: ${dateStr}`;
   }
+
 
   if (!summary) return;
 
