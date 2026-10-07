@@ -53,12 +53,17 @@ function calculateDDay(closeDateStr) {
 // Helper: Get Category Class
 function getCategoryClass(category) {
   switch (category) {
+    case '생성형AI':
     case '생성형AI/LLM': return 'cat-llm';
+    case '컴퓨터비전':
     case '지능형CCTV/비전': return 'cat-vision';
+    case '데이터구축':
     case '데이터구축/학습': return 'cat-data';
+    case '챗봇':
     case 'AI챗봇/상담': return 'cat-bot';
-    case '빅데이터/예측': return 'cat-pred';
-    default: return 'cat-llm';
+    case '빅데이터/예측':
+    case '기타AI':
+    default: return 'cat-pred';
   }
 }
 
@@ -163,10 +168,17 @@ function renderKPIs(summary, updatedAt) {
 
   if (!summary) return;
 
-  document.getElementById('valTotalCount').textContent = `${summary.total_count || allProjects.length}건`;
-  document.getElementById('valTotalBudget').textContent = formatBudget(summary.total_budget);
-  document.getElementById('valAvgBudget').textContent = formatBudget(summary.avg_budget);
-  document.getElementById('valClosingSoon').textContent = `${summary.closing_soon_count || 0}건`;
+  const totalCount = summary.total_count || allProjects.length;
+  const totalBudget = summary.total_budget || 0;
+  const avgBudget = summary.avg_budget || (totalCount > 0 ? Math.round(totalBudget / totalCount) : 0);
+  const closingSoonCount = summary.closing_soon_count !== undefined 
+    ? summary.closing_soon_count 
+    : allProjects.filter(p => calculateDDay(p.close_date).isUrgent).length;
+
+  document.getElementById('valTotalCount').textContent = `${totalCount}건`;
+  document.getElementById('valTotalBudget').textContent = formatBudget(totalBudget);
+  document.getElementById('valAvgBudget').textContent = formatBudget(avgBudget);
+  document.getElementById('valClosingSoon').textContent = `${closingSoonCount}건`;
 }
 
 // Initialize Visual Charts

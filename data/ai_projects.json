@@ -1,174 +1,161 @@
 {
-  "updated_at": "2026-10-07T09:00:00+09:00",
+  "updated_at": "2026-10-07T16:24:47+09:00",
   "summary": {
-    "total_count": 12,
-    "total_budget": 16420000000,
-    "avg_budget": 1368333333,
-    "closing_soon_count": 3,
+    "total_count": 8,
+    "total_budget": 9670000000,
+    "top_keywords": [
+      "생성형AI",
+      "컴퓨터비전",
+      "LLM",
+      "데이터구축",
+      "딥러닝"
+    ],
+    "top_budget_projects": [
+      {
+        "id": "20261001005",
+        "title": "인공지능 학습용 데이터 구축 사업(농업 분야)",
+        "agency": "한국지능정보사회진흥원",
+        "budget": 3200000000,
+        "category": "데이터구축"
+      },
+      {
+        "id": "20261001004",
+        "title": "인공지능 CCTV 영상분석 시스템 구축",
+        "agency": "서울특별시",
+        "budget": 2300000000,
+        "category": "컴퓨터비전"
+      },
+      {
+        "id": "20261001001",
+        "title": "생성형 AI 기반 대국민 민원 안내 서비스 구축 용역",
+        "agency": "한국지역정보개발원",
+        "budget": 1500000000,
+        "category": "생성형AI"
+      },
+      {
+        "id": "20261001002",
+        "title": "LLM 활용 행정문서 요약 시스템 개발",
+        "agency": "행정안전부",
+        "budget": 850000000,
+        "category": "생성형AI"
+      },
+      {
+        "id": "20261001011",
+        "title": "딥러닝 기반 문서 OCR 인식 시스템 구축",
+        "agency": "국세청",
+        "budget": 760000000,
+        "category": "컴퓨터비전"
+      }
+    ],
+    "top_agencies": [
+      {
+        "agency": "서울특별시",
+        "count": 2,
+        "total_budget": 2940000000
+      },
+      {
+        "agency": "한국지능정보사회진흥원",
+        "count": 1,
+        "total_budget": 3200000000
+      },
+      {
+        "agency": "한국지역정보개발원",
+        "count": 1,
+        "total_budget": 1500000000
+      },
+      {
+        "agency": "행정안전부",
+        "count": 1,
+        "total_budget": 850000000
+      },
+      {
+        "agency": "국세청",
+        "count": 1,
+        "total_budget": 760000000
+      }
+    ],
     "category_counts": {
-      "생성형AI/LLM": 4,
-      "지능형CCTV/비전": 3,
-      "데이터구축/학습": 2,
-      "AI챗봇/상담": 2,
-      "빅데이터/예측": 1
-    }
+      "생성형AI": 3,
+      "챗봇": 1,
+      "컴퓨터비전": 2,
+      "데이터구축": 1,
+      "기타AI": 1
+    },
+    "new_last_7_days": 5,
+    "new_this_month": 5
   },
   "projects": [
     {
-      "id": "20261001-001",
-      "title": "2026년 대국민 행정서비스 맞춤형 생성형 AI(LLM) 시범 도입 및 플랫폼 구축",
-      "agency": "한국지역정보개발원",
-      "budget": 3500000000,
-      "category": "생성형AI/LLM",
-      "notice_date": "2026-10-02",
-      "close_date": "2026-10-23 11:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "중앙부처 및 지자체 민원 데이터 기반 초거대 AI 경량화 모델 구축 및 공공 전용 생성형 질의응답 챗봇 시스템 개발"
+      "id": "20261001003",
+      "title": "AI 챗봇 기반 관광 안내 서비스 고도화 용역",
+      "agency": "한국관광공사",
+      "budget": 420000000,
+      "close_date": "2026-10-15 11:00",
+      "category": "챗봇",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001003&bidPbancOrd=000"
     },
     {
-      "id": "20261001-002",
-      "title": "지능형 도시관제 고도화를 위한 딥러닝 기반 이상행동·군중밀집 실시간 감지 시스템 구축",
-      "agency": "서울특별시청",
-      "budget": 2400000000,
-      "category": "지능형CCTV/비전",
-      "notice_date": "2026-10-03",
-      "close_date": "2026-10-18 17:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "서울 주요 혼잡 지역 2,000대 CCTV 영상 실시간 인공지능 객체 탐지 및 군중 압사 위험도 예측 경보 체계 마련"
-    },
-    {
-      "id": "20261001-003",
-      "title": "2026년 인공지능 학습용 멀티모달 데이터셋(한국어 방언 및 전문의료) 구축 사업",
-      "agency": "한국지능정보사회진흥원(NIA)",
-      "budget": 4200000000,
-      "category": "데이터구축/학습",
-      "notice_date": "2026-09-28",
-      "close_date": "2026-10-12 14:00",
-      "status": "마감임박",
-      "contract_method": "일반경쟁",
-      "link": "https://www.g2b.go.kr",
-      "description": "국내 5개 권역 방언 음성 3,000시간 및 상급종합병원 영상 판독 정밀 라벨링 데이터 50만 건 정제·구축"
-    },
-    {
-      "id": "20261001-004",
-      "title": "국세청 홈택스 2.0 AI 세무상담 챗봇 및 자동 세법 해석 어시스턴트 구축",
-      "agency": "국세청",
-      "budget": 1850000000,
-      "category": "AI챗봇/상담",
-      "notice_date": "2026-10-04",
-      "close_date": "2026-10-25 10:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "복잡한 연말정산 및 부가가치세 신고 대상자를 위한 RAG 기반 최신 세법 질의응답 및 작성 대행 챗봇"
-    },
-    {
-      "id": "20261001-005",
-      "title": "차세대 스마트 전력망(Smart Grid) 전력수요 예측 머신러닝 알고리즘 개발",
-      "agency": "한국전력공사",
+      "id": "20261001002",
+      "title": "LLM 활용 행정문서 요약 시스템 개발",
+      "agency": "행정안전부",
       "budget": 850000000,
-      "category": "빅데이터/예측",
-      "notice_date": "2026-10-01",
-      "close_date": "2026-10-14 18:00",
-      "status": "마감임박",
-      "contract_method": "제한경쟁",
-      "link": "https://www.g2b.go.kr",
-      "description": "기상 변화 및 신재생에너지 발전량 변동성을 반영한 24시간 단위 고정밀 전력 수요예측 시계열 AI 모델 구축"
+      "close_date": "2026-10-20 14:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001002&bidPbancOrd=000"
     },
     {
-      "id": "20261001-006",
-      "title": "보이스피싱 및 전자금융사기 실시간 탐지를 위한 AI 음성·문맥 분석 시스템",
-      "agency": "경찰청",
-      "budget": 1200000000,
-      "category": "생성형AI/LLM",
-      "notice_date": "2026-10-05",
-      "close_date": "2026-10-30 15:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "통화 음성 실시간 텍스트 변환(STT) 및 변종 사기 시나리오 실시간 유사도 탐지 추론 엔진"
+      "id": "20261001006",
+      "title": "AI 기반 하천 수위 예측 모델 개발 연구용역",
+      "agency": "한국수자원공사",
+      "budget": 0,
+      "close_date": "2026-10-22 15:00",
+      "category": "기타AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001006&bidPbancOrd=000"
     },
     {
-      "id": "20261001-007",
-      "title": "소방 긴급출동 최적 경로 안내 및 화재 확산 예측 AI 관제 모듈 제작",
-      "agency": "소방청",
-      "budget": 680000000,
-      "category": "지능형CCTV/비전",
-      "notice_date": "2026-09-30",
-      "close_date": "2026-10-11 11:00",
-      "status": "마감임박",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "지리정보시스템(GIS)과 실시간 교통 CCTV 및 건축물 3D 도면 연계를 통한 화재 확산 시뮬레이션"
+      "id": "20261001001",
+      "title": "생성형 AI 기반 대국민 민원 안내 서비스 구축 용역",
+      "agency": "한국지역정보개발원",
+      "budget": 1500000000,
+      "close_date": "2026-10-24 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001001&bidPbancOrd=000"
     },
     {
-      "id": "20261001-008",
-      "title": "학사 행정 고도화를 위한 캠퍼스 특화 멀티에이전트 LLM 솔루션 도입",
-      "agency": "한국과학기술원(KAIST)",
-      "budget": 450000000,
-      "category": "생성형AI/LLM",
-      "notice_date": "2026-10-06",
-      "close_date": "2026-10-28 16:00",
-      "status": "진행중",
-      "contract_method": "제한경쟁",
-      "link": "https://www.g2b.go.kr",
-      "description": "수강신청, 연구실 매칭, 장학금 추천 등 학사 전반 규정 자동 안내 에이전트 시스템"
+      "id": "20261001010",
+      "title": "생성형 AI 활용 교육 콘텐츠 제작 지원 용역",
+      "agency": "서울특별시",
+      "budget": 640000000,
+      "close_date": "2026-10-27 10:00",
+      "category": "생성형AI",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001010&bidPbancOrd=000"
     },
     {
-      "id": "20261001-009",
-      "title": "국민건강보험공단 장기요양 판정 AI 보조 지원 솔루션 구축 용역",
-      "agency": "국민건강보험공단",
-      "budget": 780000000,
-      "category": "데이터구축/학습",
-      "notice_date": "2026-10-02",
-      "close_date": "2026-10-22 14:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "의무기록 및 간호일지 비정형 텍스트 기반 등급 판정 일관성 점검 및 사기 수급 탐지 모델"
+      "id": "20261001004",
+      "title": "인공지능 CCTV 영상분석 시스템 구축",
+      "agency": "서울특별시",
+      "budget": 2300000000,
+      "close_date": "2026-10-28 10:00",
+      "category": "컴퓨터비전",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001004&bidPbancOrd=000"
     },
     {
-      "id": "20261001-010",
-      "title": "120 다산콜재단 실시간 상담원 어시스턴트 및 자동 요약 AI 도입",
-      "agency": "서울특별시 120다산콜재단",
-      "budget": 390000000,
-      "category": "AI챗봇/상담",
-      "notice_date": "2026-10-04",
-      "close_date": "2026-10-26 18:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "통화 중 추천 답변 실시간 제시 및 상담 종료 후 자동 3줄 요약/분류 시스템"
+      "id": "20261001011",
+      "title": "딥러닝 기반 문서 OCR 인식 시스템 구축",
+      "agency": "국세청",
+      "budget": 760000000,
+      "close_date": "2026-10-30 10:00",
+      "category": "컴퓨터비전",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001011&bidPbancOrd=000"
     },
     {
-      "id": "20261001-011",
-      "title": "철도 시설물 결함 자동 검측을 위한 엣지(Edge) AI 비전 시스템 개발",
-      "agency": "한국철도공사",
-      "budget": 520000000,
-      "category": "지능형CCTV/비전",
-      "notice_date": "2026-10-05",
-      "close_date": "2026-10-29 11:00",
-      "status": "진행중",
-      "contract_method": "협상에의한계약",
-      "link": "https://www.g2b.go.kr",
-      "description": "고속주행 검측차량 탑재용 고속 카메라 영상 기반 선로 균열 및 볼트 풀림 실시간 탐지"
-    },
-    {
-      "id": "20261001-012",
-      "title": "온디바이스 경량화 SLM 기반 국방 보안 문서 분석 체계 연구용역",
-      "agency": "국방과학연구소",
-      "budget": 300000000,
-      "category": "생성형AI/LLM",
-      "notice_date": "2026-10-06",
-      "close_date": "2026-10-31 15:00",
-      "status": "진행중",
-      "contract_method": "제한경쟁",
-      "link": "https://www.g2b.go.kr",
-      "description": "폐쇄망 환경에서 동작하는 소형 언어 모델(sLLM) 양자화 최적화 및 보안 문서 요약 엔진 개발"
+      "id": "20261001005",
+      "title": "인공지능 학습용 데이터 구축 사업(농업 분야)",
+      "agency": "한국지능정보사회진흥원",
+      "budget": 3200000000,
+      "close_date": "2026-11-03 17:00",
+      "category": "데이터구축",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001005&bidPbancOrd=000"
     }
   ]
 }
