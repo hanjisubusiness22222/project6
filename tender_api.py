@@ -58,10 +58,14 @@ def mask_key(url: str) -> str:
 
 
 def build_request_url(api_key: str, keyword: str, start_dt: str, end_dt: str, num_of_rows: int = 100, page_no: int = 1) -> str:
-    """조달청 API 요청 URL을 생성합니다."""
-    # Decoding 키를 urlencode로 안전하게 변환
+    """조달청 API 요청 URL을 생성합니다. Encoding/Decoding 키 모두 안전하게 처리합니다."""
+    # 이미 URL 인코딩된 키(% 포함)인 경우 unquote 후 단일 인코딩으로 통일
+    clean_key = api_key.strip()
+    if "%" in clean_key:
+        clean_key = urllib.parse.unquote(clean_key)
+
     params = {
-        "serviceKey": api_key.strip(),
+        "serviceKey": clean_key,
         "numOfRows": str(num_of_rows),
         "pageNo": str(page_no),
         "inqryDiv": "1",            # 1: 공고일시 기준
@@ -88,9 +92,10 @@ def fetch_tenders_by_keyword(api_key: str, keyword: str, start_dt: str, end_dt: 
         }
     )
 
+    content = ""
     try:
         with urllib.request.urlopen(req, timeout=15) as response:
-            content = response.read().decode("utf-8")
+            content = response.read().decode("utf-8", errors="replace")
             data = json.loads(content)
             
             # 응답 구조 파싱
@@ -112,11 +117,15 @@ def fetch_tenders_by_keyword(api_key: str, keyword: str, start_dt: str, end_dt: 
         print(f"⚠️ [API 경고] HTTP {e.code} 응답 ({keyword})")
         return []
     except json.JSONDecodeError:
-        print(f"⚠️ [API 경고] 응답이 JSON 형식이 아닙니다 (인증키 오류 또는 점검 중)")
+        # 공공데이터포털 XML 에러 메시지 추출 (예: SERVICE_KEY_IS_NOT_REGISTERED_ERROR 등)
+        err_match = re.search(r"<(?:errMsg|returnAuthMsg)>(.*?)</(?:errMsg|returnAuthMsg)>", content)
+        err_msg = err_match.group(1) if err_match else content.strip()[:100]
+        print(f"⚠️ [API 경고] 응답이 JSON 형식이 아닙니다 ({err_msg})")
         return []
     except Exception as e:
         print(f"⚠️ [API 오류] 호출 실패 ({keyword}): {e}")
         return []
+
 
 
 def collect_ai_tenders(api_key: str | None = None, days: int = 14) -> list[dict]:
