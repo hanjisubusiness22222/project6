@@ -392,6 +392,15 @@ function renderProjectGrid() {
             <span class="tender-closing-date">${p.close_date}</span>
           </div>
         </div>
+
+        <div class="card-footer-action">
+          <a href="${p.link || 'https://www.g2b.go.kr'}" target="_blank" rel="noopener" class="card-direct-btn" onclick="event.stopPropagation()" title="나라장터 공고문 새 탭으로 바로 열기">
+            <span>공고문 바로가기</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
       </article>
     `;
   }).join('');
@@ -412,11 +421,13 @@ window.openModal = function(id) {
   document.getElementById('modalNoticeDate').textContent = project.notice_date;
   document.getElementById('modalDescription').textContent = project.description || '상세 과업지시서 및 제안요청서(RFP)는 나라장터 공고 페이지에서 내려받으실 수 있습니다.';
   
-  const portalBtn = document.getElementById('modalG2bPortalLink');
-  if (portalBtn) {
-    portalBtn.href = 'https://www.g2b.go.kr';
+  // 공고문 바로가기 메인 링크
+  const directLinkBtn = document.getElementById('modalDirectLink');
+  if (directLinkBtn) {
+    directLinkBtn.href = project.link || 'https://www.g2b.go.kr';
   }
 
+  // 관련 공고 구글/나라장터 원문 검색 링크
   const searchBtn = document.getElementById('modalSearchLink');
   if (searchBtn) {
     searchBtn.href = `https://www.google.com/search?q=${encodeURIComponent('나라장터 ' + project.title)}`;

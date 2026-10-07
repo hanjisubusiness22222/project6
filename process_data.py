@@ -173,7 +173,14 @@ def to_project(item):
     project["budget"] = parse_budget(project["budget"])
     project["close_date"] = format_close_date(project["close_date"])
     project["category"] = categorize(project["title"])
-    project["link"] = str(project["link"]).strip()
+    
+    # 공고문 상세 주소 가져오기 (API의 bidNtceDtlUrl 필드 우선, 없으면 나라장터 공식 딥링크 생성)
+    link = str(project.get("link") or item.get("bidNtceDtlUrl") or item.get("bidNtceUrl") or "").strip()
+    if not link and project["id"]:
+        ord_no = str(item.get("bidNtceOrd", "000")).strip()
+        link = f"https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo={project['id']}&bidPbancOrd={ord_no}"
+    project["link"] = link
+    
     return {key: project[key] for key in ("id", "title", "agency", "budget", "close_date", "category", "link")}
 
 

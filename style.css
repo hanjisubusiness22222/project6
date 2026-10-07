@@ -1191,3 +1191,44 @@ body {
   box-shadow: 0 4px 12px rgba(88, 101, 242, 0.45);
 }
 
+/* Card Direct Action Button */
+.card-footer-action {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.65rem;
+  margin-top: 0.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.card-direct-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #818cf8;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: var(--transition-fast);
+}
+
+.card-direct-btn:hover {
+  background: var(--accent-indigo);
+  color: #ffffff;
+  border-color: var(--accent-indigo);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.card-direct-btn svg {
+  transition: transform var(--transition-fast);
+}
+
+.card-direct-btn:hover svg {
+  transform: translate(1px, -1px);
+}
+
+
