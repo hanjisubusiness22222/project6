@@ -33,26 +33,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 팀원 1이 main.py를 만들기 전에는 팀원 2의 process_data.py로 fixtures를 가공하여 ai_projects.json 생성
-      - name: Run Data Pipeline
+      # 전체 파이프라인 단위 테스트 실행
+      - name: Run Unit Tests
+        run: python -m unittest discover -s tests -v
+
+      # 통합 파이프라인 실행 (API 수집 -> 데이터 가공 -> ai_projects.json 갱신 -> 디스코드 알림)
+      - name: Run Full Data Pipeline
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
-        run: |
-          if [ -f "main.py" ]; then
-            echo "Running main.py to fetch latest data from data.go.kr..."
-            python main.py
-          elif [ -f "process_data.py" ] && [ -f "fixtures/sample_tenders.json" ]; then
-            echo "Running team member 2's process_data.py with fixtures/sample_tenders.json..."
-            python process_data.py --input fixtures/sample_tenders.json --output data/ai_projects.json
-          else
-            echo "Using existing data/ai_projects.json for dashboard."
-          fi
-
-      # 디스코드 알림 전송 (DISCORD_WEBHOOK_URL이 등록되어 있으면 자동 발송)
-      - name: Send Discord Notification
-        env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python notify_discord.py
+        run: python main.py
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
