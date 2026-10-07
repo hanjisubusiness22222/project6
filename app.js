@@ -412,8 +412,10 @@ window.openModal = function(id) {
   document.getElementById('modalNoticeDate').textContent = project.notice_date;
   document.getElementById('modalDescription').textContent = project.description || '상세 과업지시서 및 제안요청서(RFP)는 나라장터 공고 페이지에서 내려받으실 수 있습니다.';
   
-  const g2bBtn = document.getElementById('modalG2bLink');
-  g2bBtn.href = project.link || 'https://www.g2b.go.kr';
+  const portalBtn = document.getElementById('modalG2bPortalLink');
+  if (portalBtn) {
+    portalBtn.href = 'https://www.g2b.go.kr';
+  }
 
   const searchBtn = document.getElementById('modalSearchLink');
   if (searchBtn) {
