@@ -80,7 +80,7 @@ def send_discord_notification():
         "avatar_url": "https://img.icons8.com/color/96/artificial-intelligence.png",
         "embeds": [
             {
-                "title": "[나라장터] AI프로젝트 공고 모니터 (AI 모?)",
+                "title": "AI 모? (나라장터 AI프로젝트 공고 모니터 대시보드)",
                 "description": "공공데이터포털(data.go.kr) 조달청 나라장터 Open API에서 수집된 최신 인공지능 입찰 공고 현황입니다.",
                 "url": "https://hanjisubusiness22222.github.io/project6/",
                 "color": 6524913,  # Indigo (#6366f1)
