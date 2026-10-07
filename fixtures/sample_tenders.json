@@ -1,0 +1,123 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "정상"
+    },
+    "body": {
+      "items": [
+        {
+          "bidNtceNo": "20261001001",
+          "bidNtceNm": "생성형 AI 기반 대국민 민원 안내 서비스 구축 용역",
+          "dminsttNm": "한국지역정보개발원",
+          "asignBdgtAmt": "1500000000",
+          "bidClseDt": "2026-10-24 10:00:00",
+          "bidNtceDt": "2026-10-01 09:12:33",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001001&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001002",
+          "bidNtceNm": "LLM 활용 행정문서 요약 시스템 개발",
+          "dminsttNm": "행정안전부",
+          "asignBdgtAmt": "850000000",
+          "bidClseDt": "2026-10-20 14:00:00",
+          "bidNtceDt": "2026-10-02 10:30:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001002&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001003",
+          "bidNtceNm": "AI 챗봇 기반 관광 안내 서비스 고도화 용역",
+          "dminsttNm": "한국관광공사",
+          "asignBdgtAmt": "420000000",
+          "bidClseDt": "2026-10-15 11:00:00",
+          "bidNtceDt": "2026-09-25 16:05:10",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001003&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001004",
+          "bidNtceNm": "인공지능 CCTV 영상분석 시스템 구축",
+          "dminsttNm": "서울특별시",
+          "asignBdgtAmt": "2300000000",
+          "bidClseDt": "2026-10-28 10:00:00",
+          "bidNtceDt": "2026-10-05 08:40:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001004&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001005",
+          "bidNtceNm": "인공지능 학습용 데이터 구축 사업(농업 분야)",
+          "dminsttNm": "한국지능정보사회진흥원",
+          "asignBdgtAmt": "3200000000",
+          "bidClseDt": "2026-11-03 17:00:00",
+          "bidNtceDt": "2026-09-30 13:20:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001005&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001006",
+          "bidNtceNm": "AI 기반 하천 수위 예측 모델 개발 연구용역",
+          "dminsttNm": "한국수자원공사",
+          "asignBdgtAmt": "",
+          "bidClseDt": "2026-10-22 15:00:00",
+          "bidNtceDt": "2026-10-06 11:00:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001006&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001007",
+          "bidNtceNm": "사무용 PC 및 모니터 납품",
+          "dminsttNm": "경기도교육청",
+          "asignBdgtAmt": "120000000",
+          "bidClseDt": "2026-10-14 10:00:00",
+          "bidNtceDt": "2026-10-03 09:00:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001007&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001008",
+          "bidNtceNm": "AI 학습용 GPU 서버 구매",
+          "dminsttNm": "한국과학기술원",
+          "asignBdgtAmt": "980000000",
+          "bidClseDt": "2026-10-19 10:00:00",
+          "bidNtceDt": "2026-10-04 10:10:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001008&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001009",
+          "bidNtceNm": "청사 복합기 임차",
+          "dminsttNm": "부산광역시",
+          "asignBdgtAmt": "36000000",
+          "bidClseDt": "2026-10-16 10:00:00",
+          "bidNtceDt": "2026-09-28 15:00:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001009&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001002",
+          "bidNtceNm": "LLM 활용 행정문서 요약 시스템 개발",
+          "dminsttNm": "행정안전부",
+          "asignBdgtAmt": "850000000",
+          "bidClseDt": "2026-10-20 14:00:00",
+          "bidNtceDt": "2026-10-02 10:30:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001002&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001010",
+          "bidNtceNm": "생성형 AI 활용 교육 콘텐츠 제작 지원 용역",
+          "dminsttNm": "서울특별시",
+          "asignBdgtAmt": "640000000",
+          "bidClseDt": "2026-10-27 10:00:00",
+          "bidNtceDt": "2026-10-06 14:00:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001010&bidPbancOrd=000"
+        },
+        {
+          "bidNtceNo": "20261001011",
+          "bidNtceNm": "딥러닝 기반 문서 OCR 인식 시스템 구축",
+          "dminsttNm": "국세청",
+          "asignBdgtAmt": "760000000",
+          "bidClseDt": "2026-10-30 10:00:00",
+          "bidNtceDt": "2026-09-18 09:30:00",
+          "bidNtceDtlUrl": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20261001011&bidPbancOrd=000"
+        }
+      ],
+      "numOfRows": 12,
+      "pageNo": 1,
+      "totalCount": 12
+    }
+  }
+}
