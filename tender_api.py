@@ -13,6 +13,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
 if sys.stdout.encoding != 'utf-8':
@@ -82,40 +83,68 @@ def build_request_url(api_key: str, keyword: str, start_dt: str, end_dt: str, nu
 
 
 
+def _parse_xml_items(xml_str: str) -> list[dict]:
+    """조달청 API의 XML 응답에서 item 요소들을 dict 리스트로 추출합니다."""
+    items = []
+    try:
+        root = ET.fromstring(xml_str)
+        # body/items/item 또는 item 태그 탐색
+        for item_node in root.findall(".//item"):
+            item_dict = {}
+            for child in item_node:
+                item_dict[child.tag] = (child.text or "").strip()
+            if item_dict:
+                items.append(item_dict)
+    except Exception:
+        pass
+    return items
+
+
 def _request_api(url: str) -> tuple[list[dict] | None, str]:
-    """단일 URL로 API를 요청하여 (결과목록, 에러메시지)를 반환합니다."""
+    """단일 URL로 API를 요청하여 JSON 또는 XML 형식 응답을 파싱하여 반환합니다."""
     req = urllib.request.Request(
         url,
         headers={
             "User-Agent": "Mozilla/5.0 (compatible; AIPublicTenderMonitor/1.0)",
-            "Accept": "application/json"
+            "Accept": "application/json, application/xml;q=0.9"
         }
     )
     content = ""
     try:
         with urllib.request.urlopen(req, timeout=15) as response:
             content = response.read().decode("utf-8", errors="replace")
-            data = json.loads(content)
-            body = data.get("response", {}).get("body", {})
-            items = body.get("items", [])
-            if isinstance(items, dict):
-                item = items.get("item", [])
-                if isinstance(item, list):
-                    return item, ""
-                elif isinstance(item, dict):
-                    return [item], ""
+            
+            # 1. JSON 형식 시도
+            try:
+                data = json.loads(content)
+                body = data.get("response", {}).get("body", {})
+                items = body.get("items", [])
+                if isinstance(items, dict):
+                    item = items.get("item", [])
+                    if isinstance(item, list):
+                        return item, ""
+                    elif isinstance(item, dict):
+                        return [item], ""
+                    return [], ""
+                elif isinstance(items, list):
+                    return items, ""
                 return [], ""
-            elif isinstance(items, list):
-                return items, ""
-            return [], ""
+            except json.JSONDecodeError:
+                # 2. XML 형식 파싱 시도 (조달청 표준 XML 규격 대응)
+                xml_items = _parse_xml_items(content)
+                if xml_items:
+                    return xml_items, ""
+
+                # 3. 에러 메시지 추출
+                err_match = re.search(r"<(?:errMsg|returnAuthMsg)>(.*?)</(?:errMsg|returnAuthMsg)>", content)
+                err_msg = err_match.group(1) if err_match else content.strip()[:100]
+                return None, f"응답오류({err_msg})"
+
     except urllib.error.HTTPError as e:
         return None, f"HTTP {e.code}"
-    except json.JSONDecodeError:
-        err_match = re.search(r"<(?:errMsg|returnAuthMsg)>(.*?)</(?:errMsg|returnAuthMsg)>", content)
-        err_msg = err_match.group(1) if err_match else content.strip()[:100]
-        return None, f"JSON파싱실패({err_msg})"
     except Exception as e:
         return None, str(e)
+
 
 
 def fetch_tenders_by_keyword(api_key: str, keyword: str, start_dt: str, end_dt: str) -> list[dict]:
