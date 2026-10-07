@@ -121,3 +121,21 @@
    * 팀원 3은 팀원 1의 API 개발이 끝날 때까지 기다리지 않고, 사전에 정의한 `sample_tenders.json`을 사용하여 프론트엔드 UI를 바로 개발할 수 있습니다.
 3. **코드 리뷰 및 PR (Pull Request)**:
    * 최소 1인 이상의 승인 후 `main` 브랜치로 병합(Merge)하여 코드 품질을 유지합니다.
+
+---
+
+## 🔔 5. (선택) 디스코드 알림 연동 가이드
+
+GitHub Actions가 실행될 때마다(또는 매일 아침 자동 스케줄링 시) 디스코드 채널로 오늘의 AI 공고 요약 알림을 받아볼 수 있는 모듈(`notify_discord.py`)이 내장되어 있습니다.
+
+1. **디스코드 웹훅 생성**:
+   * 알림을 받을 디스코드 채널 설정 → **연동** → **웹후크 만들기**
+   * 웹후크 URL 복사 (`https://discord.com/api/webhooks/...`)
+2. **GitHub Secrets 등록**:
+   * 저장소 **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+   * Name: `DISCORD_WEBHOOK_URL`
+   * Secret: 복사한 디스코드 웹훅 URL 입력 후 등록
+3. **확인**:
+   * 등록 후 GitHub Actions가 실행되면 디스코드 채널로 예쁜 임베드 카드 형태의 공고 요약이 자동 발송됩니다.
+   * 등록하지 않아도 웹 배포는 정상 동작합니다.
+
