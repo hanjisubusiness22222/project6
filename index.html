@@ -249,15 +249,22 @@
             <p class="dt-desc" id="modalDescription">-</p>
           </div>
         </div>
+
+        <div class="modal-notice-banner">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span>현재 화면의 공고는 API 키 연동 전 모의 데이터(Sample)입니다. 실제 공고 원문과 제안요청서(RFP)는 아래 <strong>[🔍 공고 원문 검색하기]</strong>를 통해 즉시 확인하실 수 있습니다.</span>
+        </div>
       </div>
 
       <div class="modal-footer">
         <button class="btn-secondary" id="modalSecondaryClose">닫기</button>
-        <a href="#" target="_blank" rel="noopener" class="btn-secondary" id="modalSearchLink" title="공고명으로 관련 정보 검색">
-          <span>🔍 공고 검색하기</span>
+        <a href="https://www.g2b.go.kr" target="_blank" rel="noopener" class="btn-secondary" id="modalG2bPortalLink" title="나라장터 공식 포털 열기">
+          <span>나라장터(G2B) 포털</span>
         </a>
-        <a href="#" target="_blank" rel="noopener" class="btn-primary" id="modalG2bLink">
-          <span>나라장터 공고 페이지</span>
+        <a href="#" target="_blank" rel="noopener" class="btn-primary" id="modalSearchLink" title="공고명으로 관련 정보 검색">
+          <span>🔍 공고 원문 검색하기</span>
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
           </svg>
