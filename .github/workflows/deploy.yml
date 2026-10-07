@@ -33,16 +33,19 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 향후 팀원 1 & 팀원 2의 스크립트(main.py)가 추가되면 자동으로 실행하여 최신 JSON 생성
-      - name: Run Data Pipeline (if main.py exists)
+      # 팀원 1이 main.py를 만들기 전에는 팀원 2의 process_data.py로 fixtures를 가공하여 ai_projects.json 생성
+      - name: Run Data Pipeline
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: |
           if [ -f "main.py" ]; then
             echo "Running main.py to fetch latest data from data.go.kr..."
             python main.py
+          elif [ -f "process_data.py" ] && [ -f "fixtures/sample_tenders.json" ]; then
+            echo "Running team member 2's process_data.py with fixtures/sample_tenders.json..."
+            python process_data.py --input fixtures/sample_tenders.json --output data/ai_projects.json
           else
-            echo "main.py not found yet. Using existing data/ai_projects.json for dashboard."
+            echo "Using existing data/ai_projects.json for dashboard."
           fi
 
       # 디스코드 알림 전송 (DISCORD_WEBHOOK_URL이 등록되어 있으면 자동 발송)
