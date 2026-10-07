@@ -139,3 +139,26 @@ GitHub Actions가 실행될 때마다(또는 매일 아침 자동 스케줄링 �
    * 등록 후 GitHub Actions가 실행되면 디스코드 채널로 예쁜 임베드 카드 형태의 공고 요약이 자동 발송됩니다.
    * 등록하지 않아도 웹 배포는 정상 동작합니다.
 
+---
+
+## ⚡ 6. 실행 및 테스트 방법 (Quick Start)
+
+### 1) 단위 테스트 전체 실행 (18개 테스트)
+```bash
+python -m unittest discover -s tests -v
+```
+
+### 2) 전체 파이프라인 수집·정제·갱신 실행
+```bash
+# 인증키가 있으면 실제 API 호출, 없으면 모의 응답(fixtures)으로 자동 안전 실행
+python main.py
+```
+
+### 3) 로컬 웹 대시보드 실행 및 확인
+```bash
+python -m http.server 8000
+# 브라우저에서 http://localhost:8000 접속
+```
+
+
+
